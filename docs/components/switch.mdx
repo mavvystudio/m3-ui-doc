@@ -1,0 +1,108 @@
+# Switch
+
+import {useState} from 'react';
+import {Switch} from '@mavvy/m3-ui';
+import List from '@site/src/components/List';
+
+## Usage
+
+### Example
+
+```jsx
+export function SwitchExample() {
+  const [selected, setSelected] = useState(false);
+
+  const handleClick = () => {
+    setSelected((value) => !value);
+  }
+
+  return (
+    <List>
+      <Switch
+        onClick={handleClick} 
+        selected={selected}
+        color="primary"
+      />
+    </List>
+  );
+}
+```
+
+export function SwitchExample() {
+  const [selected, setSelected] = useState(false);
+
+  const handleClick = () => {
+    setSelected((value) => !value);
+  }
+
+  return (
+    <List>
+      <Switch
+        onClick={handleClick} 
+        selected={selected}
+        color="primary"
+      />
+    </List>
+  );
+}
+
+<SwitchExample />
+
+### With Icon Example
+
+```jsx
+export function SwitchExampleIcon() {
+  const [selected, setSelected] = useState(false);
+
+  const handleClick = () => {
+    setSelected((value) => !value);
+  }
+
+  return (
+    <List>
+      <Switch
+        onClick={handleClick} 
+        selected={selected}
+        color="primary"
+        inactiveIcon="light_mode"
+        activeIcon='dark_mode'
+      />
+    </List>
+  );
+}
+```
+
+export function SwitchExampleIcon() {
+  const [selected, setSelected] = useState(false);
+
+  const handleClick = () => {
+    setSelected((value) => !value);
+  }
+
+  return (
+    <List>
+      <Switch
+        onClick={handleClick} 
+        selected={selected}
+        color="primary"
+        inactiveIcon="light_mode"
+        activeIcon='dark_mode'
+      />
+    </List>
+  );
+}
+
+<SwitchExampleIcon />
+
+## Props
+|prop|type|description|
+|----|----|-----------|
+|selected|boolean|required. if true will show a selected state|
+|onClick|(event)=>void|on click handler|
+|label|string|switch component label|
+|color| [color](#color)|switch component color|
+|disabled|boolean|if true, disables the switch component|
+|activeIcon|string|icon name to display if the state is selected|
+|inactiveIcon|string|icon name to display if the state is not selected|
+|activeIconProps|IconProps|props of the Icon Component of the active icon|
+|inactiveIconProps|IconProps|props of the Icon Component of the inactive icon|

@@ -1,0 +1,66 @@
+---
+sidebar_position: 1
+---
+
+# Getting Started
+
+## Install package
+
+```bash
+npm install @mavvy/m3-ui
+```
+## Setup Tailwind
+
+Tailwind's website has a detailed setup depending on which framework you are using.
+
+[Tailwind Installation Guide](https://tailwindcss.com/docs/installation)
+
+## Tailwind Configuration 
+
+Add m3-ui to your tailwind config.
+
+*tailwind.config.js*
+
+```javascript
+const preset = require('@mavvy/m3-ui/preset');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: preset.content,
+  theme: {
+    extend: preset.theme.extend,
+  },
+  plugins: [],
+  presets: [preset],
+};
+```
+
+## Add the Material Font 
+
+On your main css file, or commonly *global.css*
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 77 152 41;
+    --icon-font-family: Material Symbols Outlined;
+  }
+}
+```
+
+Then import the font via head
+
+```html
+<head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet"
+  />
+</head>
+```
+
+

@@ -1,0 +1,105 @@
+# Button
+
+Material 3 Button
+
+## Usage
+
+### variant
+
+import {Button} from '@mavvy/m3-ui';
+import List from '@site/src/components/List';
+
+```jsx
+<Button variant="outlined">outlined</Button>
+<Button variant="elevated">elevated</Button>
+<Button variant="filled" color="primary">filled</Button>
+<Button variant="text">text</Button>
+<Button variant="fab">fab</Button>
+```
+
+export function ButtonVariantExample() {
+  return (
+    <List>
+      <Button variant="outlined">outlined</Button>
+      <Button variant="elevated">elevated</Button>
+      <Button variant="filled" color="primary">filled</Button>
+      <Button variant="text">text</Button>
+      <div className='relative top-[50px] left-[64px]'>
+        <Button variant="fab" color="primary">fab</Button>
+      </div>
+    </List>
+  );
+}
+
+<ButtonVariantExample />
+
+### size
+
+```jsx
+<Button size="small">small</Button>
+<Button>medium</Button>
+<Button size="large">large</Button>
+```
+
+export function ButtonSize() {
+  return (
+    <List>
+      <Button size="small" variant="elevated">small</Button>
+      <Button variant="elevated">medium</Button>
+      <Button size="large" variant="elevated">large</Button>
+    </List>
+  )
+}
+
+<ButtonSize />
+
+### color
+
+See [Color Reference](/docs/theming/colors)
+
+```jsx
+<Button color="primary" variant="outlined">primary</Button>
+<Button color="primary" variant="filled">primary</Button>
+<Button color="primary" variant="elevated">primary</Button>
+```
+
+export function ButtonColor() {
+  return (
+    <List>
+      <Button color="primary" variant="outlined">primary</Button>
+      <Button color="primary" variant="filled">primary</Button>
+      <Button color="primary" variant="elevated">primary</Button>
+    </List>
+  );
+}
+
+<ButtonColor/>
+
+## Example
+
+## Props
+|prop|type|description|
+|----|----|-----------|
+|variant|outlined\|elevated\|filled\|text\|fab|button variant. default text|
+|size|small\|medium\|large| button size. default medium
+|color| [color](#color)|button color|
+|disabled|boolean|disables the button|
+|vertical|boolean|arrangement of icon and button text on y axis|
+|reversed|boolean|if true - reversed ararngement of icon and text|
+|className|string|className of the button container|
+|style|object|style of the button container|
+|textClassName|string|className of the button's Text component|
+|iconClassName|string|className of the button's Icon component|
+|stateClassName|string|className of the button's state div|
+|icon|string|icon name|
+|iconVariant|[IconVariant](#icon-variant)|variant of the icon|
+|buttonAttrs|object|props to override or extend the button props|
+|textAttrs|object|props to override or extend the button's Text component props|
+|iconButton|boolean|render button as icon button - no text will be shown|
+|selected|boolean|set button as selected|
+|selectable|boolean|set button as selectable|
+|RenderComponent|React Component|render a react component as children of the button|
+
+## Reference
+
+[Material 3 Button Reference](https://m3.material.io/components/all-buttons)

@@ -1,0 +1,51 @@
+# Badge
+
+import {Badge, Button} from '@mavvy/m3-ui';
+import List from '@site/src/components/List';
+
+## Usage
+
+### size
+Two types: small and large. Badge value is only applicable on large size.
+
+```jsx
+<Badge value={1} size="small" show>
+  <Button variant="elevated">Buy</Button>
+</Badge>
+<Badge value={1} show>
+  <Button variant="elevated">Buy</Button>
+</Badge>
+<Badge value={1} size="large" show>
+  <Button variant="elevated">Buy</Button>
+</Badge>
+```
+
+export function BadgeSize() {
+  return (
+    <List>
+      <Badge containerClasName='self-center' value={1} size="small" show>
+        <Button variant="elevated">Buy</Button>
+      </Badge>
+      <Badge containerClasName='self-center' value={1} show>
+        <Button variant="elevated">Buy</Button>
+      </Badge>
+      <Badge containerClasName='self-center' value={1} size="large" show>
+        <Button variant="elevated">Buy</Button>
+      </Badge>
+    </List>
+  );
+}
+
+<BadgeSize />
+
+## Props
+
+|prop|type|description|
+|----|----|-----------|
+|value|number|value shown on the badge|
+|size|small\|large|badge size|
+|max|number|if set, will put a + sign if the value is greater than max|
+|show|boolean|displays the badge value. default is false|
+|containerClasName|string|className of the badge container component|
+|className|string|className of the badge component|
+|children|React.ReactNode|optional children component|
