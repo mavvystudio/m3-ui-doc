@@ -1,7 +1,5 @@
 # Button
 
-Material 3 Button
-
 ## Usage
 
 ### variant
@@ -75,7 +73,39 @@ export function ButtonColor() {
 
 <ButtonColor/>
 
-## Example
+## Custom Example
+
+
+```jsx
+  <Button
+    icon=""
+    variant="elevated"
+    color="tertiary"
+    className="!bg-surface-container-highest"
+    iconClassName="!text-sky-400 after:content-['token'] group-hover:after:!content-['fullscreen\_exit'] group-hover:!text-orange-400 group-hover:rotate-45 !text-4xl group-active:scale-75 group-active:!text-blue-700"
+    size="medium"
+    reversed
+  >
+    Elevated Custom
+  </Button>
+```
+export function ButtonExample() {
+  return (
+    <Button
+      icon=""
+      variant="elevated"
+      color="tertiary"
+      className="!bg-surface-container-highest"
+      iconClassName="!text-sky-400 after:content-['token'] group-hover:after:!content-['fullscreen\_exit'] group-hover:!text-orange-400 group-hover:rotate-45 !text-4xl group-active:scale-75 group-active:!text-blue-700"
+      size="medium"
+      reversed
+    >
+      Elevated Custom
+    </Button>
+  );
+}
+
+<ButtonExample />
 
 ## Props
 |prop|type|description|

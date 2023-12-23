@@ -5,8 +5,9 @@ import List from '@site/src/components/List';
 
 ## Usage
 
-### size
-Two types: small and large. Badge value is only applicable on large size.
+Two types of sizes: **small** and **large**.
+
+Badge value is only visible on **large** size.
 
 ```jsx
 <Badge value={1} size="small" show>
@@ -16,6 +17,9 @@ Two types: small and large. Badge value is only applicable on large size.
   <Button variant="elevated">Buy</Button>
 </Badge>
 <Badge value={1} size="large" show>
+  <Button variant="elevated">Buy</Button>
+</Badge>
+<Badge value={100} max={99} size="large" show>
   <Button variant="elevated">Buy</Button>
 </Badge>
 ```
@@ -30,6 +34,9 @@ export function BadgeSize() {
         <Button variant="elevated">Buy</Button>
       </Badge>
       <Badge containerClasName='self-center' value={1} size="large" show>
+        <Button variant="elevated">Buy</Button>
+      </Badge>
+      <Badge containerClasName='self-center' value={100} max={99} size="large" show>
         <Button variant="elevated">Buy</Button>
       </Badge>
     </List>

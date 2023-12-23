@@ -1,0 +1,77 @@
+# Dialog
+
+import {useState} from 'react';
+import {Button, Dialog, Text} from '@mavvy/m3-ui';
+import Preview from '@site/src/components/Preview';
+
+## Basic Dialog
+
+```jsx
+function BasicDialog() {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen((value) => !value);
+  }
+  const handleClose = () => {
+    setOpen(false);
+  }
+  return (
+    <div>
+      <Button variant="filled" color="primary" onClick={handleClick}>Show Dialog</Button>
+      <Dialog
+        title="Dialog Title"
+        open={isOpen}
+        onClose={handleClose}
+      >
+        <div className="w-[600px] h-[300px] flex items-center justify-center flex-col">
+          <Text size="large" variant="headline">Hello World!</Text>
+        </div>
+      </Dialog>
+    </div>
+  )
+}
+```
+
+export function DialogExample() {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen((value) => !value);
+  }
+  const handleClose = () => {
+    setOpen(false);
+  }
+  return (
+    <Preview>
+      <Button variant="filled" color="primary" onClick={handleClick}>Show Dialog</Button>
+      <Dialog
+        title="Dialog Title"
+        open={isOpen}
+        onClose={handleClose}
+      >
+        <div className="w-[600px] h-[300px] flex items-center justify-center flex-col">
+          <Text size="large" variant="headline">Hello World!</Text>
+        </div>
+      </Dialog>
+    </Preview>
+  )
+}
+
+Preview
+
+<DialogExample />
+
+## Props
+
+|prop|type|description|
+|----|----|-----------|
+|open|boolean|required. if true, will show the dialog|
+|onClose|() => void| required. handler for close dialog event|
+|fullScreen|boolean| if true, will render a full screen dialog|
+|title|string|dialog title|
+|disableBackdropClose|boolean|if true, disabled the click event on the backdrop that triggers the close event|
+|closeButtonClassName|string|applies the className to the Button component of the close button|
+|titleClassName|string|applies the className to the Text component of the title|
+|position|top\|bottom\|center|y position of the dialog|
+|cardClassName|string|applies the className to the Card component of the dialog|

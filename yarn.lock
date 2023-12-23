@@ -1711,10 +1711,10 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
-"@mavvy/m3-ui@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@mavvy/m3-ui/-/m3-ui-1.1.1.tgz#353e76dfa6afe2f1e99769ffba82c87604108d64"
-  integrity sha512-oKtPlPc2usjicOGKB0qmUzJF4ns2zLaxqPTYb47T9hB74v1XWiuau8944fIwZg7Ej3fKFaR0CwymBksOQbOqIg==
+"@mavvy/m3-ui@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@mavvy/m3-ui/-/m3-ui-1.1.6.tgz#5acf1ae2493d0477d20eac91adf1a1996b0038cf"
+  integrity sha512-U17UQF8qmlahOe/HoKA/2WJelBd1dTyq8s2OPfqtZ7uttdxk9DuYkhCok8WaQrMluCuqkv5zeOhIBYWBESLKkQ==
 
 "@mdx-js/mdx@^3.0.0":
   version "3.0.0"
