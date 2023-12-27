@@ -1,0 +1,129 @@
+# Menu
+
+import {useState} from 'react';
+import {Menu, Button, Text} from '@mavvy/m3-ui';
+import Preview from '@site/src/components/Preview';
+import List from '@site/src/components/List';
+
+## Usage
+
+```jsx
+import { useState } from 'react';
+import { Menu, Button, Text } from '@mavvy/m3-ui';
+
+function Example() {
+  const [value, setValue] = useState('');
+  const items = [
+    {
+      text: 'Home',
+      value: 'home',
+      active: true,
+    },
+    {
+      text: 'Premium',
+      value: 'premium',
+      disabled: true,
+    },
+    {
+      text: 'Profile',
+      value: 'profile',
+    },
+    {
+      isDivider: true,
+    },
+    {
+      text: 'Logout',
+      value: 'logout',
+      leadingIcon: 'logout',
+    },
+  ];
+  const handleChange = (v) => {
+    setValue(v);
+  };
+
+  return (
+    <div className="flex flex-col justify-center">
+      <Text>selected value: {value}</Text>
+      <Menu items={items} onChange={handleChange}>
+        <Button variant="filled" color="primary">
+          Open
+        </Button>
+      </Menu>
+    </div>
+  );
+}
+```
+
+export function BasicExample() {
+  const [value, setValue] = useState('');
+  const items = [
+    {
+      text: 'Home',
+      value: 'home',
+      active: true,
+    },
+    {
+      text: 'Premium',
+      value: 'premium',
+      disabled: true,
+    },
+    {
+      text: 'Profile',
+      value: 'profile',
+    },
+    {
+      isDivider: true,
+    },
+    {
+      text: 'Logout',
+      value: 'logout',
+      leadingIcon: 'logout',
+    },
+  ];
+  const handleChange = (v) => {
+    setValue(v);
+  };
+
+  return (
+    <List>
+      <Text>selected value: {value}</Text>
+      <Menu items={items} onChange={handleChange}>
+        <Button variant="filled" color="primary">
+          Open
+        </Button>
+      </Menu>
+    </List>
+  );
+}
+
+
+<Preview>
+  <BasicExample />
+</Preview>
+
+## Props
+
+### Menu
+
+|prop|type|description|
+|----|----|-----------|
+|items|[MenuItemProps[]](#menu-item-props)|required. menu items array|
+|onChange|(value:string, index: number) => void|required. on change handler|
+|menuListClassName|string|className to be applied on the menu list container|
+|itemClassName|string|className to be applied on each menu item|
+|position|top-left\|top-right\|bottom-left\|bottom-right|position of the menu list|
+|children|React.ReactNode|react children|
+|disableRemoveOverflow|boolean|default behaviour is to add an overflow class to the body, set if to true to disable it|
+
+
+### Menu Item Props
+
+|prop|type|description|
+|----|----|-----------|
+|text|string|menu text to display on the list|
+|value|string|menu item value to pass on the change handler|
+|trailingIcon|string|icon name to display as a trailing icon|
+|trailingText|string|trailing text|
+|isDivider|boolean|render as a divider|
+|disabled|boolean|if true, will set the item as disabled|
+|action|boolean|if true, will set the state as active|

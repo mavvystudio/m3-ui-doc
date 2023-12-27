@@ -1,0 +1,91 @@
+# Select
+
+import {useState} from 'react';
+import List from '@site/src/components/List';
+import {Select, Text} from '@mavvy/m3-ui';
+
+## Basic Example
+
+```jsx
+import { useState } from 'react';
+import { Select, Text } from '@mavvy/m3-ui';
+
+function SelectExample() {
+  const [fruit, setFruit] = useState(null);
+
+  const options = [
+    {
+      text: 'Apple',
+      value: 'apple',
+    },
+    {
+      text: 'Banana',
+      value: 'banana',
+    },
+  ];
+
+  const handleChange = (val) => {
+    setFruit(val);
+  }
+
+  return (
+    <div>
+      <Text>Fruit: {fruit}</Text>
+      <Select 
+        label="Fruits"
+        onChange={handleChange}
+        options={options}
+        value={fruit}
+      />
+    </div>
+  );
+}
+```
+
+export function SelectExample() {
+  const [fruit, setFruit] = useState(null);
+
+  const options = [
+    {
+      text: 'Apple',
+      value: 'apple',
+    },
+    {
+      text: 'Banana',
+      value: 'banana',
+    },
+  ];
+
+  const handleChange = (val) => {
+    setFruit(val);
+  }
+
+  return (
+    <List>
+      <Text>Fruit: {fruit}</Text>
+      <Select 
+        label="Fruits"
+        onChange={handleChange}
+        options={options}
+        value={fruit}
+      />
+    </List>
+  );
+}
+
+Preview
+
+<SelectExample />
+
+## Props
+
+Extends [TextField Props](#Textfield)
+
+|prop|type|description|
+|----|----|-----------|
+|options|\{text: string, value: any\}[]|array of option item to display on the dropdown list|
+|autoComplete|boolean|if true, will apply auto complete feature|
+|top|boolean|if true, show the dropdown list at the top of the component|
+|ItemComponent|React Component|Renders a custom component for each item on the list|
+|disableRemoveOverflow|boolean|default behaviour is to add an overflow class to the body, set if to true to disable it|
+|noOptionText|string|if list is empty, show this text|

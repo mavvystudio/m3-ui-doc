@@ -9,6 +9,9 @@ import List from '@site/src/components/List';
 ### Example
 
 ```jsx
+import { useState } from 'react';
+import { Switch } from '@mavvy/m3-ui';
+
 export function SwitchExample() {
   const [selected, setSelected] = useState(false);
 
@@ -17,13 +20,11 @@ export function SwitchExample() {
   }
 
   return (
-    <List>
-      <Switch
-        onClick={handleClick} 
-        selected={selected}
-        color="primary"
-      />
-    </List>
+    <Switch
+      onClick={handleClick} 
+      selected={selected}
+      color="primary"
+    />
   );
 }
 ```

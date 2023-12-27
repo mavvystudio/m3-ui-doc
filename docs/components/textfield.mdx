@@ -1,0 +1,335 @@
+# TextField
+
+import { useState } from 'react';
+import Preview from '@site/src/components/Preview';
+import { TextField } from '@mavvy/m3-ui';
+
+## Example
+
+```jsx
+import { useState } from 'react';
+import { TextField } from '@mavvy/m3-ui';
+
+export function Example() {
+  const [value, setValue] = useState('');
+
+  const handleChange = (val) => {
+    setValue(val);
+  };
+
+  return (
+    <div className="flex w-full gap-x-10">
+      <div className="flex flex-col w-full gap-y-1.5">
+        <TextField
+          variant="filled"
+          icon="fullscreen"
+          value={value}
+          label="Email"
+          type="email"
+          placeholder="Place email here"
+          onChange={handleChange}
+          size="small"
+          showClearButton
+          error={!value}
+        />
+        <TextField
+          variant="filled"
+          value={value}
+          type="email"
+          placeholder="Place email here"
+          onChange={handleChange}
+          supportingText="Supporting Text"
+          prefix="wt"
+          suffix="kg"
+          showClearButton
+          error={!value}
+        />
+        <TextField
+          variant="filled"
+          value={value}
+          label="Email"
+          type="email"
+          placeholder="Place email here"
+          onChange={handleChange}
+          supportingText="Supporting Text"
+          prefix="php"
+        />
+        <TextField
+          variant="filled"
+          value={value}
+          label="Email"
+          type="email"
+          placeholder="Place email here"
+          onChange={handleChange}
+          supportingText="Supporting Text"
+          showClearButton
+          error={!value}
+        />
+        <TextField
+          variant="filled"
+          value={value}
+          label="Email"
+          type="email"
+          onChange={handleChange}
+          contentClassName="!h-52"
+          multiple
+          error={!value}
+        />
+
+        <TextField
+          variant="filled"
+          value="a@a.com"
+          label="Email"
+          type="email"
+          onChange={handleChange}
+          disabled
+        />
+      </div>
+      <div className="flex flex-col w-full gap-y-1.5">
+        <TextField
+          icon="fullscreen"
+          value={value}
+          label="Email"
+          type="email"
+          placeholder="Place email here"
+          onChange={handleChange}
+          size="small"
+          showClearButton
+          error={!value}
+        />
+        <TextField
+          icon="email"
+          value={value}
+          label="Email"
+          type="email"
+          placeholder="Place email here"
+          onChange={handleChange}
+          supportingText="Supporting Text"
+          prefix="$"
+          suffix="kg"
+          showClearButton
+        />
+        <TextField
+          prefix="st"
+          value={value}
+          label="Email"
+          type="email"
+          placeholder="Place email here"
+          onChange={handleChange}
+          supportingText="Supporting Text"
+        />
+        <TextField
+          value={value}
+          label="Email"
+          type="email"
+          placeholder="Place email here"
+          onChange={handleChange}
+          supportingText="Supporting Text"
+          showClearButton
+          error={!value}
+        />
+        <TextField
+          value={value}
+          label="Email"
+          type="email"
+          onChange={handleChange}
+          contentClassName="!h-52"
+          multiple
+        />
+
+        <TextField
+          value="a@a.com"
+          label="Email"
+          type="email"
+          onChange={handleChange}
+          disabled
+        />
+      </div>
+    </div>
+  );
+}
+```
+
+export function Example() {
+  const [value, setValue] = useState('');
+
+  const handleChange = (val) => {
+    setValue(val);
+  };
+
+  return (
+    <Preview>
+      <div className="flex w-full gap-x-10">
+        <div className="flex flex-col w-full gap-y-1.5">
+          <TextField
+            variant="filled"
+            icon="fullscreen"
+            value={value}
+            label="Email"
+            type="email"
+            placeholder="Place email here"
+            onChange={handleChange}
+            size="small"
+            showClearButton
+            error={!value}
+          />
+          <TextField
+            variant="filled"
+            value={value}
+            type="email"
+            placeholder="Place email here"
+            onChange={handleChange}
+            supportingText="Supporting Text"
+            prefix="wt"
+            suffix="kg"
+            showClearButton
+            error={!value}
+          />
+          <TextField
+            variant="filled"
+            value={value}
+            label="Email"
+            type="email"
+            placeholder="Place email here"
+            onChange={handleChange}
+            supportingText="Supporting Text"
+            prefix="php"
+          />
+          <TextField
+            variant="filled"
+            value={value}
+            label="Email"
+            type="email"
+            placeholder="Place email here"
+            onChange={handleChange}
+            supportingText="Supporting Text"
+            showClearButton
+            error={!value}
+          />
+          <TextField
+            variant="filled"
+            value={value}
+            label="Email"
+            type="email"
+            onChange={handleChange}
+            contentClassName="!h-52"
+            multiple
+            error={!value}
+          />
+
+          <TextField
+            variant="filled"
+            value="a@a.com"
+            label="Email"
+            type="email"
+            onChange={handleChange}
+            disabled
+          />
+        </div>
+        <div className="flex flex-col w-full gap-y-1.5">
+          <TextField
+            icon="fullscreen"
+            value={value}
+            label="Email"
+            type="email"
+            placeholder="Place email here"
+            onChange={handleChange}
+            size="small"
+            showClearButton
+            error={!value}
+          />
+          <TextField
+            icon="email"
+            value={value}
+            label="Email"
+            type="email"
+            placeholder="Place email here"
+            onChange={handleChange}
+            supportingText="Supporting Text"
+            prefix="$"
+            suffix="kg"
+            showClearButton
+          />
+          <TextField
+            prefix="st"
+            value={value}
+            label="Email"
+            type="email"
+            placeholder="Place email here"
+            onChange={handleChange}
+            supportingText="Supporting Text"
+          />
+          <TextField
+            value={value}
+            label="Email"
+            type="email"
+            placeholder="Place email here"
+            onChange={handleChange}
+            supportingText="Supporting Text"
+            showClearButton
+            error={!value}
+          />
+          <TextField
+            value={value}
+            label="Email"
+            type="email"
+            onChange={handleChange}
+            contentClassName="!h-52"
+            multiple
+          />
+
+          <TextField
+            value="a@a.com"
+            label="Email"
+            type="email"
+            onChange={handleChange}
+            disabled
+          />
+        </div>
+      </div>
+    </Preview>
+  );
+}
+
+<Example />
+
+## Props
+
+|prop|type|description|
+|----|----|-----------|
+|onChange|(value: string\|number\|boolean) => void|required. onChange handler|
+|label|string|textfield label|
+|value|string\|number\|boolean|value of the textfield|
+|type|string|HTMLInputTypeAttribute|
+|attrs|Object|html attributes for the input element|
+|onKeyDown|(event) => void| onKeyDown event handler|
+|onKeyUp|(event) => void| onKeyUp event handler|
+|onFocus|(event) => void| onFocus event handler|
+|onBlur|(event) => void| onBlur event handler|
+|className|string|className of the Textfield component|
+|contentClassName|string|className of the container component of the input element|
+|inputClassName|string|className of the input element|
+|labelClassName|string|className of the label|
+|variant|outlined\|fileld|Textfield variant|
+|color| [color](#color)|component color|
+|disabled|boolean|if true, component will be disabled|
+|multiple|boolean|for input type file to handle multiple selection|
+|placeholder|string|placeholder of the input element|
+|icon|string|icon to display|
+|iconVariant|[Icon Variant](#icon-variant)| variant of the icon|
+|iconClassName|string|className of the Icon component|
+|size|[Size](#size)|size of the Textfield component|
+|error|boolean|if true, shows an error state|
+|supportingText|string| supporting text below the input element|
+|supportingTextClassName|string|className of the supportingText Text Component|
+|showClearButton|boolean|if true, shows a clear button|
+|clearIconClassName|string|className of the Clear IconButton|
+|trailingIcon|string|icon name of the trailing icon|
+|onClear|(value: string\|number\|boolean) => void| on clear handler|
+|outlineClassName|string|className of the outline component|
+|prefix|string|render a prefix text|
+|suffix|string|render a suffix text|
+|FieldComponent|Function|Render a Field component aside from the input element|
+|options|any|pass the options to the FieldComponent|
+|endAdornment|(props: \{focused:boolean\}) => JSX Component| end Adornment to render|
+|startAdornment|Raect.ReactNode|start Adornment to render|

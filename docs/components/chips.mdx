@@ -1,0 +1,107 @@
+# Chips
+
+import {useState} from 'react';
+import {Chip} from '@mavvy/m3-ui';
+import List from '@site/src/components/List';
+
+## Example
+
+```jsx
+import { useState } from 'react';
+import { Chip } from '@mavvy/m3-ui';
+
+function Example() {
+  const [selected, setSelected] = useState(false);
+
+  const handleSelect = () => {
+    setSelected((v) => !v);
+  }
+  return (
+    <div>
+      <Chip onClick={handleSelect} selected={selected}>
+        Hello
+      </Chip>
+      <Chip color="primary" onClick={handleSelect} selected={selected}>
+        Hello
+      </Chip>
+      <Chip leadingIcon="check" onClick={handleSelect} selected={selected}>
+        Hello
+      </Chip>
+      <Chip
+        leadingIcon="check"
+        color="primary"
+        onClick={handleSelect}
+        selected={selected}
+      >
+        Hello
+      </Chip>
+      <Chip
+        trailingIcon="close"
+        color="primary"
+        onClick={handleSelect}
+        selected={selected}
+      >
+        Hello
+      </Chip>
+    </div>
+  );
+}
+
+```
+
+export function Example() {
+  const [selected, setSelected] = useState(false);
+
+  const handleSelect = () => {
+    setSelected((v) => !v);
+  }
+  return (
+    <List>
+      <Chip onClick={handleSelect} selected={selected}>
+        Hello
+      </Chip>
+      <Chip color="primary" onClick={handleSelect} selected={selected}>
+        Hello
+      </Chip>
+      <Chip leadingIcon="check" onClick={handleSelect} selected={selected}>
+        Hello
+      </Chip>
+      <Chip
+        leadingIcon="check"
+        color="primary"
+        onClick={handleSelect}
+        selected={selected}
+      >
+        Hello
+      </Chip>
+      <Chip
+        trailingIcon="close"
+        color="primary"
+        onClick={handleSelect}
+        selected={selected}
+      >
+        Hello
+      </Chip>
+    </List>
+  );
+}
+
+Preview
+
+<Example />
+
+## Props
+
+|prop|type|description|
+|----|----|-----------|
+|color|[Color](#color)|component color|
+|leadingIcon|string|leading icon to render on the chip|
+|leadingIconClassName|string|className to apply on the leadingIcon Icon component|
+|trailingIcon|string|trailing icon to render on the chip|
+|trailingIconClassName|string|className to apply on the trailingIcon Icon component|
+|className|string|className of the chip component|
+|textClassName|string|className of the Text component|
+|selected|boolean|if tru, shows a selected state|
+|onClick|(event: React.MouseEvent) => void| handler for the click event|
+|variant|filled\|outlined| variant of the Chip component|
+|size|[Size](#size)|size of the chip component|
