@@ -1,5 +1,144 @@
 # Icon
 
+import { Icon, Text } from '@mavvy/m3-ui';
+import Preview from '@site/src/components/Preview';
+import List from '@site/src/components/List';
+
+export function Item({ children }) {
+  return (
+    <div className="flex flex-col mx-8 items-center">
+      {children}
+    </div>
+  );
+}
+
+## Usage
+
+### variant
+
+When choosing a variant, make sure to load the target font. You can load all three or just one.
+
+sharp
+
+```html
+<head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet"
+  />
+</head>
+```
+rounded
+
+```html
+<head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet"
+  />
+</head>
+```
+
+**Variant Example**
+
+```jsx
+<Icon>emoji_food_beverage</Icon>
+<Icon variant="rounded">emoji_food_beverage</Icon>
+<Icon variant="sharp">emoji_food_beverage</Icon>
+```
+
+export function VariantExample() {
+  return (
+    <Preview>
+      <Item>
+        <Text>outlined</Text>
+        <Icon fontVariant="display">emoji_food_beverage</Icon>
+      </Item>
+
+      <Item>
+        <Text>rounded</Text>
+        <Icon variant="rounded" fontVariant="display">emoji_food_beverage</Icon>
+      </Item>
+
+      <Item>
+        <Text>sharp</Text>
+        <Icon variant="sharp" fontVariant="display">emoji_food_beverage</Icon>
+      </Item>
+    </Preview>
+  );
+}
+
+<VariantExample />
+
+### size
+
+Size varies on *size* and *fontVariant* props
+
+
+```jsx
+<Icon size="large" fontVariant="body">light_mode</Icon>
+<Icon size="large" fontVariant="title">light_mode</Icon>
+<Icon size="large" fontVariant="display">light_mode</Icon>
+```
+
+export function Example() {
+  return (
+    <Preview>
+      <Item>
+        <Icon size="large" fontVariant="body">light_mode</Icon>
+      </Item>
+      <Item>
+       <Icon size="large" fontVariant="title">light_mode</Icon>
+      </Item>
+      <Item>
+       <Icon size="large" fontVariant="display">light_mode</Icon>
+      </Item>
+    </Preview>
+  );
+}
+
+<Example />
+
+### color
+
+```jsx
+<Icon color="primary">home</Icon>
+<Icon color="error">home</Icon>
+```
+
+export function ColorExample() {
+  const items = [
+    <Icon size="medium" fontVariant="display" color="primary">home</Icon>,
+    <Icon size="medium" fontVariant="display" color="error">home</Icon>
+  ];
+  return (
+    <Preview items={items}>
+    </Preview>
+  );
+}
+
+<ColorExample />
+
+### filled
+
+```jsx
+<Icon size="medium" fontVariant="display" color="primary" filled>home</Icon>
+<Icon size="medium" fontVariant="display" color="error" filled>home</Icon>
+```
+
+export function FilledExample() {
+  const items = [
+    <Icon size="medium" fontVariant="display" color="primary" filled>home</Icon>,
+    <Icon size="medium" fontVariant="display" color="error" filled>home</Icon>
+  ];
+  return (
+    <Preview items={items}>
+    </Preview>
+  );
+}
+
+<FilledExample />
+
 ## Props
 
 |prop|type|description|
@@ -7,6 +146,6 @@
 |children|string|icon name of the google material icon|
 |variant|outlined\|rounded\|sharp|variant of the icon|
 |color|[Color](/docs/theming/colors)|icon color|
-|size|[Size](#size)|size of the chip component|
-|filled|boolean|if true, will be displayed as a fileld icon|
+|size|[Size](#size)|size of the icon component|
+|filled|boolean|if true, will be displayed as a filled icon|
 |fontVariant|[TextVariant](#text-variant)|variant to apply|

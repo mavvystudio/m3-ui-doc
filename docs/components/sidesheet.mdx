@@ -1,6 +1,62 @@
 # SideSheet
 
-# Props
+## Example
+
+```jsx
+import { useState } from 'react';
+import { Button, SideSheet, Text } from '@mavvy/m3-ui';
+
+export function SideSheetExample() {
+  const [isOpen, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div>
+      <Button color="tertiary" variant="filled" onClick={() => setOpen(true)}>
+        Open
+      </Button>
+      <SideSheet open={isOpen} onClose={handleClose}>
+        <div className="w-[300px] p-10">
+          <Text>Hello World!</Text>
+        </div>
+      </div>
+    </Preview>
+  );
+}
+
+
+```
+
+import Preview from '@site/src/components/Preview';
+
+import { useState } from 'react';
+import { Button, SideSheet, Text } from '@mavvy/m3-ui';
+
+export function SideSheetExample() {
+  const [isOpen, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <Preview>
+      <Button color="tertiary" variant="filled" onClick={() => setOpen(true)}>
+        Open
+      </Button>
+      <SideSheet open={isOpen} onClose={handleClose}>
+        <div className="w-[300px] p-10">
+          <Text>Hello World!</Text>
+        </div>
+      </SideSheet>
+    </Preview>
+  );
+}
+
+<SideSheetExample />
+
+## Props
 |prop|type|description|
 |----|----|-----------|
 |open|boolean|required. if true, show the side sheet|

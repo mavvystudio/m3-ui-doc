@@ -1,5 +1,95 @@
 # Snackbar
 
+## Example
+
+```jsx
+import { useState } from 'react';
+import { Snackbar, Button, Text } from '@mavvy/m3-ui';
+
+function SnackbarExample() {
+  const [isOpen, setIsOpen] = useState(false);
+  const centered = false;
+  const color = undefined;
+  const duration = 3000;
+  const showCloseIcon = true;
+  const action = {
+    text: 'Action',
+    fn: () => setIsOpen(false),
+  };
+
+  const handleSelect = () => {
+    setIsOpen((v) => !v);
+  };
+
+  return (
+    <div>
+      <Button color="tertiary" variant="filled" disabled={isOpen} onClick={handleSelect}>
+        Show
+      </Button>
+      <Snackbar
+        action={action}
+        color={color}
+        accentColor="primary"
+        centered={centered}
+        showCloseIcon={showCloseIcon}
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        duration={duration}
+      >
+        <Text component="span" color="on-inverse-surface">
+         Hello World!
+        </Text>
+      </Snackbar>
+    </div>
+  );
+}
+```
+
+import Preview from '@site/src/components/Preview';
+
+import { useState } from 'react';
+import { Snackbar, Button, Text } from '@mavvy/m3-ui';
+
+export function SnackbarExample() {
+  const [isOpen, setIsOpen] = useState(false);
+  const centered = false;
+  const color = undefined;
+  const duration = 3000;
+  const showCloseIcon = true;
+  const action = {
+    text: 'Action',
+    fn: () => setIsOpen(false),
+  };
+
+  const handleSelect = () => {
+    setIsOpen((v) => !v);
+  };
+
+  return (
+    <Preview>
+      <Button color="tertiary" variant="filled" disabled={isOpen} onClick={handleSelect}>
+        Show
+      </Button>
+      <Snackbar
+        action={action}
+        color={color}
+        accentColor="primary"
+        centered={centered}
+        showCloseIcon={showCloseIcon}
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        duration={duration}
+      >
+        <Text component="span" color="on-inverse-surface">
+         Hello World!
+        </Text>
+      </Snackbar>
+    </Preview>
+  );
+}
+
+<SnackbarExample />
+
 ## Props
 |prop|type|description|
 |----|----|-----------|

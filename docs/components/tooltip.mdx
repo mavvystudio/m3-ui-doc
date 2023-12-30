@@ -1,6 +1,43 @@
 # Tooltip
 
-# Props
+## Example
+
+import Preview from '@site/src/components/Preview';
+import { Tooltip, Button } from '@mavvy/m3-ui';
+
+export function TooltipExample() {
+  return (
+    <Preview>
+      <Tooltip text="Hello World!">
+        <Button color="primary" variant="filled" onClick={() => {}}>
+          Default Top
+        </Button>
+      </Tooltip>
+
+      <Tooltip text="Hello World!" yPosition="bottom">
+        <Button color="tertiary" variant="filled" onClick={() => {}}>
+          Bottom
+        </Button>
+      </Tooltip>
+
+      <Tooltip text="Hello World!" yPosition="center" xPosition="right">
+        <Button color="tertiary" variant="filled" onClick={() => {}}>
+          Right Center
+        </Button>
+      </Tooltip>
+
+      <Tooltip text="Hello World!" yPosition="center" xPosition="left">
+        <Button color="tertiary" variant="filled" onClick={() => {}}>
+          Left Center
+        </Button>
+      </Tooltip>
+    </Preview>
+  );
+}
+
+<TooltipExample />
+
+## Props
 |prop|type|description|
 |----|----|-----------|
 |text|string|required. tooltip text|

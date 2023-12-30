@@ -1,6 +1,61 @@
 # RadioButton
 
-# Props
+import List from '@site/src/components/List';
+
+import { useState } from 'react';
+import { RadioButton } from '@mavvy/m3-ui';
+
+## Example
+
+```jsx
+import { useState } from 'react';
+import { RadioButton } from '@mavvy/m3-ui';
+
+function RadioExample() {
+  const [selected, setSelected] = useState(false);
+
+  const handleSelect = () => {
+    setSelected((v) => !v);
+  };
+
+  return (
+    <div>
+      <RadioButton onClick={handleSelect} selected={selected} label="Hello" />
+      <RadioButton
+        color="primary"
+        onClick={handleSelect}
+        selected={selected}
+        label="Hello"
+      />
+    </div>
+  );
+}
+```
+
+export function RadioExample() {
+  const [selected, setSelected] = useState(false);
+
+  const handleSelect = () => {
+    setSelected((v) => !v);
+  };
+
+  return (
+    <List>
+      <RadioButton onClick={handleSelect} selected={selected} label="Hello" />
+      <RadioButton
+        color="primary"
+        onClick={handleSelect}
+        selected={selected}
+        label="Hello"
+      />
+    </List>
+  );
+}
+
+<RadioExample />
+
+## Props
+
 |prop|type|description|
 |----|----|-----------|
 |label|string|label text of the radio button|

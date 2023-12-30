@@ -1,5 +1,52 @@
 # CircularProgress
 
+## Example
+
+```jsx
+import { CircularProgress, Text } from '@mavvy/m3-ui';
+
+export function Example() {
+  return (
+    <div>
+      <Text>small</Text>
+      <CircularProgress
+        color="secondary"
+        size="small"
+        indeterminate
+      />
+      <Text>medium</Text>
+      <CircularProgress color="secondary" indeterminate />
+      <Text>large</Text>
+      <CircularProgress
+        color="secondary"
+        size="large"
+        indeterminate
+      />
+    </div>
+  );
+}
+
+
+```
+
+import { CircularProgress, Text } from '@mavvy/m3-ui';
+import List from '@site/src/components/List';
+
+export function Example() {
+  return (
+    <List>
+      <Text>small</Text>
+      <CircularProgress indeterminate color="secondary" size="small" />
+      <Text>medium</Text>
+      <CircularProgress indeterminate color="secondary" />
+      <Text>large</Text>
+      <CircularProgress indeterminate color="secondary" size="large" />
+    </List>
+  );
+}
+
+<Example />
+
 ## Props
 
 |prop|type|description|

@@ -1,5 +1,28 @@
 # Linear Progress
 
+## Example
+
+```jsx
+<LinearProgress color="error" indeterminate />
+<LinearProgress color="secondary" value={50} />
+<LinearProgress value={25} />
+```
+
+import { LinearProgress } from '@mavvy/m3-ui';
+import List from '@site/src/components/List';
+
+export function Example() {
+  return (
+    <List>
+      <LinearProgress color="error" indeterminate />
+      <LinearProgress color="secondary" value={50} />
+      <LinearProgress value={25} />
+    </List>
+  );
+}
+
+<Example />
+
 ## Props
 |prop|type|description|
 |----|----|-----------|

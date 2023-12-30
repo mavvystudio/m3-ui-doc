@@ -1,9 +1,76 @@
 # Card
 
-# Props
+## Usage
+
+### variant
+
+```jsx
+import {Card, Text} from '@mavvy/m3-ui';
+
+export function VariantExample() {
+  return (
+    <div className="flex gap-x-2">
+      <Card>
+        <div className="flex w-[200px] h-[150px]">
+          <Text>elevated</Text>
+        </div>
+      </Card>
+      <Card variant="filled" className="bg-surface-container-highest">
+        <div className="flex w-[200px] h-[150px]">
+          <Text>filled</Text>
+        </div>
+      </Card>
+      <Card variant="outlined">
+        <div className="flex w-[200px] h-[150px]">
+          <Text>outlined</Text>
+        </div>
+      </Card>
+    </div>
+  )
+}
+```
+
+import {Card, Text} from '@mavvy/m3-ui';
+import Preview from '@site/src/components/Preview';
+
+export function Container({children}) {
+  return (
+    <div className="flex w-[200px] h-[150px]">{children}</div>
+  );
+}
+
+export function VariantExample() {
+  return (
+    <Preview>
+      <div className="flex gap-x-2">
+        <Card>
+          <Container>
+            <Text>elevated</Text>
+          </Container>
+        </Card>
+        <Card variant="filled" className="bg-surface-container-highest">
+          <Container>
+            <Text>filled</Text>
+          </Container>
+        </Card>
+        <Card variant="outlined">
+          <Container>
+            <Text>outlined</Text>
+          </Container>
+        </Card>
+      </div>
+    </Preview>
+  )
+}
+
+<VariantExample />
+
+## Props
 
 |prop|type|description|
 |----|----|-----------|
+|variant|elevated \| filled \| outlined|card variant|
+|noPadding|boolean|if true, no padding will be added to the card|
 |className|string|className of the component|
 |children|React.ReactNode|react children|
 |style|Object|style of the component|
