@@ -45,6 +45,9 @@ a {
 p {
   margin: 0 0 var(--ifm-paragraph-margin-bottom);
 }
+pre code {
+  background-color: rgb(var(--color-surface-container-highest));
+}
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -53,27 +56,43 @@ p {
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #00a789; 
-  --ifm-color-primary-dark:  #0b8f77;  
-  --ifm-color-primary-darker:  #055a4a; 
-  --ifm-color-primary-darkest:  #05372e;
+  --color-outline: 147 143 153;
+  --color-on-surface: 230 224 233;
+  --color-surface-container: 33 31 38;
+  --color-surface-container-low: 29 27 32;
+  --color-surface-container-lowest: 15 13 19;
+  --color-surface-container-high: 43 41 48;
+  --color-surface-container-highest: 54 52 59;
+
+  --color-on-primary: 56 30 114;
+  --color-primary: 208 188 255;
+  --color-on-primary-fixed: 30 0 93;
+  --color-inverse-surface: 230 224 233;
+
+  --tw-text-opacity: 1;
+  --tw-bg-opacity: 1;
+
+  --ifm-color-primary: rgb(var(--color-primary)); 
+  --ifm-color-primary-dark:  rgb(var(--color-on-primary));  
+  --ifm-color-primary-darker:  var(--color-on-primary-fixed); 
+  --ifm-color-primary-darkest: var(--color-on-primary-fixed);
   --ifm-color-primary-light:  #1fc6a7; 
   --ifm-color-primary-lighter:  #3bd1b5;
   --ifm-color-primary-lightest:  #5fd7c1;
   --ifm-code-font-size: 95%;
+  --ifm-font-color-base: #efefef;
+  --ifm-menu-color: rgba(var(--color-inverse-surface));
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   --ifm-z-index-fixed: 10;
+
+  --ifm-background-color: rgb(var(--color-surface-container));
+  --ifm-navbar-background-color: rgb(var(--color-surface-container-low));
+  --prism-background-color: rgb(var(--color-surface-container-low));
+  --ifm-pre-background: rgb(var(--color-surface-container-low));
+  --ifm-toc-border-color: rgb(var(--color-surface-container-highest));
+  --ifm-scrollbar-track-background-color: rgb(var(--color-surface-container-low));
+  --ifm-scrollbar-thumb-background-color: rgb(var(--color-surface-container-highest));
+  --ifm-scrollbar-thumb-hover-background-color: rgb(var(--color-surface-container-high));
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #12e3bc; 
-  --ifm-color-primary-dark:  #12e3bc;  
-  --ifm-color-primary-darker:  #12e3bc; 
-  --ifm-color-primary-darkest:  #12e3bc;
-  --ifm-color-primary-light:  #12e3bc; 
-  --ifm-color-primary-lighter:  #12e3bc;
-  --ifm-color-primary-lightest:  #12e3bc;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
