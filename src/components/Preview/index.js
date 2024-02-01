@@ -4,7 +4,7 @@ export function Item({ children }) {
 
 export default function ({ children, items = [] }) {
   return (
-    <div className="bg-surface-container-highest p-[20px] rounded-lg gap-y-2 gap-x-2 flex justify-center">
+    <div className="bg-surface-dim p-[20px] rounded-lg gap-y-2 gap-x-2 flex justify-center">
       {items.map((item, i) => (
         <Item key={i}>{item}</Item>
       ))}

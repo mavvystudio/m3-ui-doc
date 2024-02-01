@@ -3,6 +3,7 @@
 ## Example
 
 ```jsx
+
 import { CircularProgress, Text } from '@mavvy/m3-ui';
 
 export function Example() {
@@ -10,15 +11,15 @@ export function Example() {
     <div>
       <Text>small</Text>
       <CircularProgress
-        color="secondary"
+        color="primary"
         size="small"
         indeterminate
       />
       <Text>medium</Text>
-      <CircularProgress color="secondary" indeterminate />
+      <CircularProgress color="primary" indeterminate />
       <Text>large</Text>
       <CircularProgress
-        color="secondary"
+        color="primary"
         size="large"
         indeterminate
       />
@@ -36,11 +37,11 @@ export function Example() {
   return (
     <List>
       <Text>small</Text>
-      <CircularProgress indeterminate color="secondary" size="small" />
+      <CircularProgress indeterminate color="primary" size="small" />
       <Text>medium</Text>
-      <CircularProgress indeterminate color="secondary" />
+      <CircularProgress indeterminate color="primary" />
       <Text>large</Text>
-      <CircularProgress indeterminate color="secondary" size="large" />
+      <CircularProgress indeterminate color="primary" size="large" />
     </List>
   );
 }

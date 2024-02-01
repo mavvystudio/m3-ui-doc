@@ -17,7 +17,7 @@ export function SideSheetExample() {
       <Button color="tertiary" variant="filled" onClick={() => setOpen(true)}>
         Open
       </Button>
-      <SideSheet open={isOpen} onClose={handleClose}>
+      <SideSheet className="shadow-2xl !bg-surface-bright" open={isOpen} onClose={handleClose}>
         <div className="w-[300px] p-10">
           <Text>Hello World!</Text>
         </div>
@@ -45,7 +45,7 @@ export function SideSheetExample() {
       <Button color="tertiary" variant="filled" onClick={() => setOpen(true)}>
         Open
       </Button>
-      <SideSheet open={isOpen} onClose={handleClose}>
+      <SideSheet className="shadow-2xl !bg-surface-bright" open={isOpen} onClose={handleClose}>
         <div className="w-[300px] p-10">
           <Text>Hello World!</Text>
         </div>

@@ -46,7 +46,13 @@ p {
   margin: 0 0 var(--ifm-paragraph-margin-bottom);
 }
 pre code {
-  background-color: rgb(var(--color-surface-container-highest));
+  background-color: rgb(var(--color-surface-dim));
+}
+.card {
+  color: rgb(var(--color-inverse-surface));
+}
+.card:hover {
+  --ifm-link-hover-color: rgb(var(--color-primary));
 }
 /**
  * Any CSS included here will be global. The classic template
@@ -63,11 +69,19 @@ pre code {
   --color-surface-container-lowest: 15 13 19;
   --color-surface-container-high: 43 41 48;
   --color-surface-container-highest: 54 52 59;
-
+  --color-surface-bright: 58 56 63;
+  --color-surface-dim: 20 18 24;
+  --color-on-surface-variant: 202 196 208;
   --color-on-primary: 56 30 114;
   --color-primary: 208 188 255;
   --color-on-primary-fixed: 30 0 93;
+  --color-tertiary: 238 184 200;
+  --color-on-tertiary: 73 37 50;
+  --color-tertiary-container: 98 59 72;
   --color-inverse-surface: 230 224 233;
+  --color-on-inverse-surface: 49 47 54;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   --tw-text-opacity: 1;
   --tw-bg-opacity: 1;
@@ -81,18 +95,17 @@ pre code {
   --ifm-color-primary-lightest:  #5fd7c1;
   --ifm-code-font-size: 95%;
   --ifm-font-color-base: #efefef;
-  --ifm-menu-color: rgba(var(--color-inverse-surface));
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-
+  --ifm-menu-color: rgb(var(--color-inverse-surface));
   --ifm-z-index-fixed: 10;
-
+  --ifm-card-background-color: rgb(var(--color-surface-dim));
   --ifm-background-color: rgb(var(--color-surface-container));
   --ifm-navbar-background-color: rgb(var(--color-surface-container-low));
-  --prism-background-color: rgb(var(--color-surface-container-low));
-  --ifm-pre-background: rgb(var(--color-surface-container-low));
+  --prism-background-color: rgb(var(--color-surface-dim));
+  --ifm-pre-background: rgb(var(--color-surface-dim));
   --ifm-toc-border-color: rgb(var(--color-surface-container-highest));
   --ifm-scrollbar-track-background-color: rgb(var(--color-surface-container-low));
   --ifm-scrollbar-thumb-background-color: rgb(var(--color-surface-container-highest));
   --ifm-scrollbar-thumb-hover-background-color: rgb(var(--color-surface-container-high));
+  --ifm-color-emphasis-200: rgba(var(--color-surface-bright));
 }
 
