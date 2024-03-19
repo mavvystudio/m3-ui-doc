@@ -1,6 +1,7 @@
 # Badge
 
-import {Badge, Button} from '@mavvy/m3-ui';
+import Badge from '@mavvy/m3-ui/Badge';
+import Button from '@mavvy/m3-ui/Button';
 import List from '@site/src/components/List';
 
 ## Usage
@@ -12,6 +13,11 @@ Two types of sizes: **small** and **large**.
 Badge value is only visible on **large** size.
 
 ```jsx
+import Badge from '@mavvy/m3-ui/Badge';
+import Button from '@mavvy/m3-ui/Button';
+
+...
+
 <Badge value={1} size="small" show>
   <Button variant="elevated">Buy</Button>
 </Badge>
