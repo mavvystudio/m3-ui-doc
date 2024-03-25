@@ -1,0 +1,88 @@
+import { useState } from 'react';
+import Button from '@mavvy/m3-ui/Button';
+import Form from '@mavvy/m3-ui/Form';
+
+# Form
+
+## Usage
+
+```jsx
+import { usestate } from 'react';
+import Button from '@mavvy/m3-ui/Button';
+import Form from '@mavvy/m3-ui/Form';
+
+function FormPage() {
+  const [formValue, setFormValue] = useState({
+    username: '',
+    password: '',
+  });
+
+  const handleSubmit = () => {
+    window.alert(JSON.stringify(formValue, null, 2));
+  };
+
+  const fields = [{
+    key: 'username',
+    label: 'Username',
+  }, {
+    key: 'password',
+    label: 'Password',
+    type: 'password',
+  }];
+
+  return (
+    <Form
+      formValue={formValue}
+      onChange={setFormValue}
+      onSubmit={handleSubmit}
+      fields={fields}
+    >
+      <Button variant="filled" color="primary">Login</Button>
+    </Form>
+  );
+}
+
+```
+
+export function FormPage() {
+  const [formValue, setFormValue] = useState({
+    username: '',
+    password: '',
+  });
+
+  const handleSubmit = () => {
+    window.alert(JSON.stringify(formValue, null, 2));
+  };
+
+  const fields = [{
+    key: 'username',
+    label: 'Username',
+  }, {
+    key: 'password',
+    label: 'Password',
+    type: 'password',
+  }];
+
+  return (
+    <Form
+      formValue={formValue}
+      onChange={setFormValue}
+      onSubmit={handleSubmit}
+      fields={fields}
+    >
+      <Button variant="filled" color="primary">Login</Button>
+    </Form>
+  );
+}
+
+<FormPage />
+
+## Props
+
+|prop|type|description|
+|----|----|-----------|
+|formValue|Object||
+|onChange|() => void||
+|onSubmit|() => void||
+|fields|any[]||
+|color|Color||
