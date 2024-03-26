@@ -21,6 +21,13 @@ function FormPage() {
     window.alert(JSON.stringify(formValue, null, 2));
   };
 
+  const handleChange = (key, value) => {
+    setFormValue((data) => ({
+      ...data,
+      [key]: value
+    }));
+  }
+
   const fields = [{
     key: 'username',
     label: 'Username',
@@ -32,8 +39,8 @@ function FormPage() {
 
   return (
     <Form
-      formValue={formValue}
-      onChange={setFormValue}
+      value={formValue}
+      onChange={handleChange}
       onSubmit={handleSubmit}
       fields={fields}
     >
@@ -54,6 +61,13 @@ export function FormPage() {
     window.alert(JSON.stringify(formValue, null, 2));
   };
 
+  const handleChange = (key, value) => {
+    setFormValue((data) => ({
+      ...data,
+      [key]: value
+    }));
+  }
+
   const fields = [{
     key: 'username',
     label: 'Username',
@@ -65,8 +79,8 @@ export function FormPage() {
 
   return (
     <Form
-      formValue={formValue}
-      onChange={setFormValue}
+      value={formValue}
+      onChange={handleChange}
       onSubmit={handleSubmit}
       fields={fields}
     >
@@ -81,8 +95,8 @@ export function FormPage() {
 
 |prop|type|description|
 |----|----|-----------|
-|formValue|Object||
-|onChange|() => void||
+|value|Object||
+|onChange|(key: string, value: any) => void||
 |onSubmit|() => void||
 |fields|any[]||
 |color|Color||
